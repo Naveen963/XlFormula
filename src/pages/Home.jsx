@@ -8,10 +8,7 @@ export const Home = () => {
     const [selectedChip, setSelectedChip] = useState('');
     return (
         <>
-            <Navbar />
             <Search setSelectedChip={setSelectedChip} />
-            <Table selectedChip={selectedChip} />
-            <Outlet />
         </>
     )
 }

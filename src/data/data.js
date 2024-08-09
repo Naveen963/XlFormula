@@ -124,5 +124,161 @@ export const shortcuts = {
       description:
         "Selects all the cells in the current data region of the worksheet.",
     },
+    {
+      type: "editingdata",
+      windshortcut: "Alt+Enter",
+      macshortcut: "Ctrl+Option+Return",
+      description: "Moves the cursor to a new line in the cell being edited.",
+    },
+    {
+      type: "editingdata",
+      windshortcut: "Shift+Right Arrow	",
+      macshortcut: "Shift+Right Arrow	",
+      description: "Selects a character to the right of cursor.",
+    },
+    {
+      type: "editingdata",
+      windshortcut: "Shift+Left Arrow",
+      macshortcut: "Shift+Left Arrow",
+      description: "Selects a character to the left of cursor.",
+    },
+    {
+      type: "editingdata",
+      windshortcut: "Alt+Enter",
+      macshortcut: "Ctrl+Option+Return",
+      description: "Moves the cursor to a new line in the cell being edited.",
+    },
+    {
+      type: "editingdata",
+      windshortcut: "F2",
+      macshortcut: "Control+U",
+      description: "Edits (places the cursor in) the active cell.",
+    },
+    {
+      type: "editingdata",
+      windshortcut: "F9",
+      macshortcut: "Fn+F9",
+      description: "Calculates all worksheets in all open workbooks.",
+    },
+    {
+      type: "editingdata",
+      windshortcut: "F4",
+      macshortcut: "F4",
+      description:
+        "Cycles through combinations of absolute and relative references for the selected cell reference.",
+    },
+    {
+      type: "navigatingworksheets",
+      windshortcut: "Ctrl+Home",
+      macshortcut: "Fn+Ctrl+Left Arrow",
+      description: "Navigates to cell A1 of the given worksheet.",
+    },
+    {
+      type: "navigatingworksheets",
+      windshortcut: "Ctrl+Right Arrow	",
+      macshortcut: "Ctrl+Right Arrow",
+      description:
+        "Navigates to the right edge of the current row, in the current data region.",
+    },
+    {
+      type: "navigatingworksheets",
+      windshortcut: "Ctrl+Left Arrow",
+      macshortcut: "Ctrl+Left Arrow	",
+      description:
+        "Navigates to the left edge of the current row, in the current data region.",
+    },
+    {
+      type: "navigatingworksheets",
+      windshortcut: "Ctrl+Up Arrow",
+      macshortcut: "Ctrl+Up Arrow",
+      description:
+        "Navigates to the top edge of the current column, in the current data region.",
+    },
+    {
+      type: "navigatingworksheets",
+      windshortcut: "Ctrl+Down Arrow",
+      macshortcut: "Ctrl+Down Arrow",
+      description:
+        "Navigates to the bottom edge of the current column, in the current data region.",
+    },
+    {
+      type: "navigatingworksheets",
+      windshortcut: "Ctrl+End",
+      macshortcut: "Ctrl+End",
+      description: "Navigates to the last cell used in the current worksheet.",
+    },
+    {
+      type: "worksheets",
+      windshortcut: "Ctrl+O",
+      macshortcut: "Command+O",
+      description: "Displays the menu for opening a workbook.",
+    },
+    {
+      type: "worksheets",
+      windshortcut: "Ctrl+N",
+      macshortcut: "Command+N",
+      description: "Creates a new workbook.",
+    },
+    {
+      type: "worksheets",
+      windshortcut: "Ctrl+W",
+      macshortcut: "Command+W",
+      description: "Closes the active workbook window.",
+    },
+    {
+      type: "worksheets",
+      windshortcut: "Ctrl+S",
+      macshortcut: "Command+S	",
+      description: "Saves the current workbook.",
+    },
+    {
+      type: "worksheets",
+      windshortcut: "Shift+F11",
+      macshortcut: "Fn+Shift+F11",
+      description: "Inserts a new worksheet.",
+    },
+    {
+      type: "miscellaneous",
+      windshortcut: "Ctrl+Z",
+      macshortcut: "Command+Z",
+      description: "Undo last action.",
+    },
+    {
+      type: "miscellaneous",
+      windshortcut: "Ctrl+Y",
+      macshortcut: "Command+Y",
+      description: "Redo last action.",
+    },
+    {
+      type: "miscellaneous",
+      windshortcut: "Ctrl+Shift+L",
+      macshortcut: "Command+Shift+F",
+      description: "Adds or removes Autofilters from the current data region.",
+    },
+    {
+      type: "miscellaneous",
+      windshortcut: "Ctrl+T",
+      macshortcut: "Ctrl+T",
+      description:
+        "Inserts a table based on either the current selection or the current data region.",
+    },
+    {
+      type: "miscellaneous",
+      windshortcut: "Alt+F11",
+      macshortcut: "Fn+Option+F11",
+      description: "Displays the VBA Editor.",
+    },
+    {
+      type: "miscellaneous",
+      windshortcut: "F1",
+      macshortcut: "F1",
+      description: "Displays the Excel Help task pane.",
+    },
+    {
+      type: "miscellaneous",
+      windshortcut: "F7",
+      macshortcut: "F7",
+      description: "Displays the Spellcheck dialog box.",
+    },
   ],
 };

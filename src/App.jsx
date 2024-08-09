@@ -1,14 +1,19 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { KeyBoard } from './pages/Keyboard';
+import { Layout } from './layout/layout';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Layout />,
     children: [
       {
-        path: '/keyboard',
+        index: true,
+        element: <Home />
+      },
+      {
+        path: '/keyboardshortcuts',
         element: <KeyBoard />
       }
     ]

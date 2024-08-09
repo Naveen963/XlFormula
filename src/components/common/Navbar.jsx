@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const navLinkClasses = ({ isActive, isPending }) => (isActive ? "text-emerald-50" : isPending ? "pending" : "") + " hover:text-emerald-50"
     return (
         <nav className=" bg-gradient-to-tr from-emerald-50 to-emerald-600 py-4">
             <div className="container mx-auto flex justify-between items-center">
-                <a href="#" className="text-emerald-500 text-3xl font-bold">XlFormula</a>
+                <NavLink to='/' className="text-emerald-500 text-3xl font-bold">XlFormula</NavLink>
 
                 {/* Navigation Links */}
-                <div className={`md:flex space-x-4 text-lg font-normal  ${isOpen ? 'block' : 'hidden'}`}>
-                    <a href="#" className="hover:text-emerald-50">ShortCuts</a>
-                    <a href="#" className="hover:text-emerald-50">Formulas</a>
+                <div className={`md:flex space-x-6 text-lg font-normal  ${isOpen ? 'block' : 'hidden'}`}>
+                    <NavLink to='/keyboardshortcuts' className={navLinkClasses}>ShortCuts</NavLink>
+                    <NavLink to='/functions' className={navLinkClasses}>Functions</NavLink>
+                    <NavLink to="/formulas" className={navLinkClasses}>Formulas</NavLink>
                 </div>
 
                 {/* Mobile Menu Button */}
