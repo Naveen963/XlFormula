@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { KeyBoard } from './pages/Keyboard';
 import { Layout } from './layout/layout';
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'keyboardshortcuts',
-        element: <KeyBoard />
+        element: <KeyBoard />,
       },
       {
         path: 'functions',
@@ -26,11 +26,15 @@ const router = createBrowserRouter([
             index: true,
             element: <Functions />,
           },
-          {
-            path: ':type',
-            element: <DetailedPage />
-          }
+          // {
+          //   path: ':type',
+          //   element: <DetailedPage />
+          // }
         ]
+      },
+      {
+        path: "*",
+        element: <Navigate to="/" />
       }
     ]
   }
