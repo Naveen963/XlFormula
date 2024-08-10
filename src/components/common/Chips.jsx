@@ -1,21 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Chip } from 'primereact/chip';
-const Chipss = ({ setSelectedChip }) => {
-    const [chips, setChips] = useState([
-        { label: "Navigating Worksheets", code: 'navigatingworksheets' },
-        { label: "Selecting Cells", code: 'selectingcells' },
-        { label: "Editing Cells", code: 'editingcells' },
-        { label: " Formatting Cells", code: 'formattingcells' },
-        { label: "Editing Data", code: 'editingdata' },
-        { label: "Working With Worksheets & Workbooks", code: 'worksheets' },
-        { label: "Miscellaneous", code: 'miscellaneous' }
-    ])
-
+const Chipss = ({ setSelectedChip, chips, chip: selectedChip }) => {
     const [clickedChip, setClickedChip] = useState(-1)
+    useEffect(() => {
+        if (selectedChip) {
+            const index = chips.findIndex(c => c.label == selectedChip)
+            setClickedChip(prev => clickedChip == index ? -1 : index)
+            setSelectedChip('')
+        }
+    }, [selectedChip])
+
     const clickedChipHandler = (e, chip) => {
-        const index = chips.findIndex(c => c.label == chip.label)
-        setClickedChip(prev => clickedChip == index ? -1 : index)
-        setSelectedChip(clickedChip == index ? '' : chip)
+        const cIndex = chips.findIndex(c => c.label == chip.label)
+        setClickedChip(prev => clickedChip == cIndex ? -1 : cIndex)
+        setSelectedChip((prev) => cIndex == clickedChip ? 'none' : chip)
     }
     return (
         <div className='hidden md:flex justify-center items-center'>
