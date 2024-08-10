@@ -13,7 +13,7 @@ export const Navbar = () => {
                 <div className={`md:flex space-x-6 text-lg font-normal  ${isOpen ? 'block' : 'hidden'}`}>
                     <NavLink to='/keyboardshortcuts' className={navLinkClasses}>ShortCuts</NavLink>
                     <NavLink to='/functions' className={navLinkClasses}>Functions</NavLink>
-                    <NavLink to="/formulas" className={navLinkClasses}>Formulas</NavLink>
+                    {/* <NavLink to="/formulas" className={navLinkClasses}>Formulas</NavLink> */}
                 </div>
 
                 {/* Mobile Menu Button */}

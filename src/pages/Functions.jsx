@@ -17,6 +17,7 @@ export const Functions = () => {
         { label: "Function Name", code: "function" },
         { label: "Syntax", code: "syntax" },
         { label: "Description", code: "description" },
+        { label: "Example", code: "example", customCol: true },
     ];
     const [rows, setRows] = useState([]);
     const [filters, setFilters] = useState({
@@ -45,7 +46,7 @@ export const Functions = () => {
         }
         else
             setRows(shortcuts.functions);
-        setLoading(false);
+
         const t = setTimeout(() => setLoading(false), 1000);
         () => {
             clearTimeout(t)

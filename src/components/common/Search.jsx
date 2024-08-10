@@ -16,10 +16,6 @@ export const Search = () => {
         label: type.label, code: 'functions', items: shortcuts.functions.filter(c => c.type == type.label).map(f => ({ label: f.function, code: type.code, value: f.function, type: type.label }))
 
     })))
-    console.log(searchSuggestions.filter(c => c.code == 'functions').map(c => c.items)[0].map(type => ({
-        label: type.label, code: 'functions', items: shortcuts.functions.filter(c => c.type == type.label).map(f => ({ label: f.function, code: type.code, value: f.function }))
-
-    })))
 
     const groupedItemTemplate = (item) => {
         return (
